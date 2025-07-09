@@ -3,7 +3,8 @@ import cv2
 def read_video(video_path):
     cap = cv2.VideoCapture(video_path)
     frames = []
-    for i in range(3):
+    while True:
+    # for i in range(3):
         ret, frame = cap.read()
         if not ret:
             break

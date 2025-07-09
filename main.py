@@ -15,7 +15,7 @@ from player_ball_assigner import PlayerBallAssigner
 
 def main():
     # Read Video
-    video_frames = read_video("D:/AI&DS/cv_job_assignment/stealth_mode/Assignment Materials/15sec_input_720p.mp4")
+    video_frames = read_video("D:/AI&DS/opencv/opencv_project/football_player_tracking_using_sv_byte_track/input_video/15sec_input_720p.mp4")
     # print(video_frames)
 
     # Initialize Tracker
@@ -28,7 +28,7 @@ def main():
 
     print("\n =========tracks[ball]============ \n", tracks["ball"])
     # Interpolate Ball Positions
-    # tracks["ball"] = tracker.interpolate_ball_positions(tracks["ball"])
+    tracks["ball"] = tracker.interpolate_ball_positions(tracks["ball"])
     
     print("\n =========tracks[ball]============ \n", tracks["ball"])
     # Save cropped image of a player from the first frame

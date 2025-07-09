@@ -1,0 +1,11 @@
+How It Works: In Short
+
+1. **Video Loading:** Reads all frames from an input football match video using OpenCV.
+2. **Object Detection:** Uses a YOLOv8 model to detect players, referees, and the ball in each frame.
+3. **Object Tracking:** Applies ByteTrack to assign consistent IDs to detected objects across frames.
+4. **Ball Interpolation (Optional):** Fills in missing ball positions by interpolation (can be commented out).
+5. **Team Color Clustering:** Extracts jersey colors and clusters players into two teams using KMeans.
+6. **Team Assignment:** Assigns each player a team and a representative color for visualization.
+7. **Ball Possession Assignment:** Determines which player is closest to the ball in each frame and marks them as having possession.
+8. **Visualization:** Draws bounding ellipses, team colors, player IDs, and ball possession overlays on each frame.
+9. **Output Video:** Saves the annotated frames as a new video at 24 frames per second.
